@@ -21,7 +21,7 @@
                         <td><img src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
                         <td>{{$comic->title}}</td>
                         <td>{{$comic->series}}</td>
-                        <td>{{$comic->price}}</td>
+                        <td>{{$comic->price}} &euro;</td>
                     </tr>
                 @endforeach
                 
