@@ -4,30 +4,21 @@
 
 @section('content')
 
-    <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Immagine</th>
-                    <th scope="col">Titolo</th>
-                    <th scope="col">Serie</th>
-                    <th scope="col">Prezzo</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @foreach ($comics as $comic)
-                    <tr>
-                        <td><img src="{{$comic->thumb}}" alt="{{$comic->title}}"></td>
-                        <td>{{$comic->title}}</td>
-                        <td>{{$comic->series}}</td>
-                        <td>{{$comic->price}} &euro;</td>
-                    </tr>
-                @endforeach
-                
-            </tbody>
-        </table>
-    </div>
-
+    <section class="bg-light">
+        <div class="container d-flex flex-wrap">
+            @foreach ($comics as $comic)
+                <div class="card ms_card bg-dark text-white">
+                    <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$comic->title}}</h5>
+                        <p class="card-text">{{$comic->series}}</p>
+                        <p class="card-text">Price: <span class="text-success">{{$comic->price}} &euro;</span></p>
+                        <a href="#" class="btn btn-primary">Acquista ora</a>
+                        <a href="{{route('comic.show',  $comic->id )}}" class="btn btn-light">Dettagli</a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </section>
 
 @endsection

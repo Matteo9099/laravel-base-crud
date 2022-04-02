@@ -1,5 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.ms_card {
+  width: calc(25% - 40px);
+  margin: 20px;
+}
+
+#figure {
+  width: 40%;
+}
+
+#figure img {
+  width: 100%;
+  height: 600px;
+}
+
+#description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
