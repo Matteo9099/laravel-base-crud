@@ -18,6 +18,7 @@
                         <p class="card-text">Price: <span class="text-success">{{$comic->price}} &euro;</span></p>
                         <a href="#" class="btn btn-primary">Acquista ora</a>
                         <a href="{{route('comic.show',  $comic->id )}}" class="btn btn-light">Dettagli</a>                       
+                        <a href="{{route('comic.edit',  $comic->id )}}" class="btn btn-light">Modifica</a>                       
                         <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" data-name="{{ $comic->title }}">
                             @csrf
                             @method('DELETE')
