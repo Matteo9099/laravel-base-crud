@@ -22,15 +22,17 @@
                         <p class="card-text">Price: <span class="text-success">{{$comic->price}} &euro;</span></p>
 
                         {{-- Bottoni card --}}
-                        <a href="#" class="btn btn-primary">Acquista ora</a>
-                        <a href="{{route('comic.show',  $comic->id )}}" class="btn btn-light">Dettagli</a>                       
-                        <a href="{{route('comic.edit',  $comic->id )}}" class="btn btn-light">Modifica</a>   
+                        <div class="d-flex justify-content-around">
 
-                        <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" data-name="{{ $comic->title }}" class="form-delete">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn-danger mt-2" type="submit">Elimina</button>
-                        </form>
+                            <a href="{{route('comic.show',  $comic->id )}}" title="Dettagli" class="btn btn-info d-flex align-items-center"><i class="fa-solid fa-eye"></i></a>                       
+                            <a href="{{route('comic.edit',  $comic->id )}}" title="Modifica" class="btn btn-warning d-flex align-items-center"><i class="fa-solid fa-pencil"></i></a>   
+    
+                            <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" data-name="{{ $comic->title }}" class="form-delete">
+                                @csrf
+                                @method('DELETE')
+                                <button title="Elimina"class="btn btn-danger d-flex align-items-center" type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </div>
 
                     </div>
                 </div>

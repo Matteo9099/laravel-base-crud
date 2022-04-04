@@ -12,7 +12,7 @@
             @include('includes.header')
 
             <main class="px-3 pt-5">
-                <h1>CREA E ACQUISTA FUMETTI</h1>
+                <h1>CREA E VENDI FUMETTI</h1>
                 <p class="lead my-3 w-75 m-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi impedit
                     dicta corrupti expedita quo tempora quos eius aspernatur maiores nihil, est quas odio illum cupiditate
                     iure harum magnam, sit officiis!</p>
