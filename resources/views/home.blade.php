@@ -17,7 +17,7 @@
                     dicta corrupti expedita quo tempora quos eius aspernatur maiores nihil, est quas odio illum cupiditate
                     iure harum magnam, sit officiis!</p>
                 <p class="lead">
-                    <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark">Fumetti</a>
+                    <a href="{{route('comic.index')}}" class="btn btn-lg btn-secondary fw-bold border-white bg-white text-dark">Fumetti</a>
                 </p>
             </main>
 
