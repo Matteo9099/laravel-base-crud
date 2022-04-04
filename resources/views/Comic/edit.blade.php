@@ -4,6 +4,8 @@
     Comic | Modifica: {{$comic->title}}
 @endsection
 
+@include('includes.header')
+
 @section('content')
 
     <div class="container">

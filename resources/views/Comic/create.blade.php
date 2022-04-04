@@ -2,6 +2,8 @@
 
 @section('pageTitle', 'Comic | Creazione fumetto')
 
+@include('includes.header')
+
 @section('content')
 
     <div class="container">

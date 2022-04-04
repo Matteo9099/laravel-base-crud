@@ -1,6 +1,8 @@
 @extends('layouts.base')
 
-@section('pageTitle', 'Comic')
+@section('pageTitle', 'Comics | List ')
+
+@include('includes.header')
 
 @section('content')
 
@@ -14,7 +16,7 @@
                 <div class="card ms_card bg-dark text-white">
                     <img src="{{$comic->thumb}}" class="card-img-top" alt="{{$comic->title}}">
                     <div class="card-body">
-                        
+
                         <h5 class="card-title">{{$comic->title}}</h5>
                         <p class="card-text">{{$comic->series}}</p>
                         <p class="card-text">Price: <span class="text-success">{{$comic->price}} &euro;</span></p>
@@ -24,7 +26,7 @@
                         <a href="{{route('comic.show',  $comic->id )}}" class="btn btn-light">Dettagli</a>                       
                         <a href="{{route('comic.edit',  $comic->id )}}" class="btn btn-light">Modifica</a>   
 
-                        <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" data-name="{{ $comic->title }}">
+                        <form action="{{ route('comic.destroy', $comic->id) }}" method="POST" data-name="{{ $comic->title }}" class="form-delete">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger mt-2" type="submit">Elimina</button>
