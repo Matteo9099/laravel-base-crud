@@ -47,12 +47,12 @@ class ComicController extends Controller
                 'title' => 'required|min:5',
                 'series' => 'required',
                 'type' => 'required|min:5',
-                'description' => 'required|min:20',
+                'description' => 'required|min:20|max:255',
                 'sale_date' => '',
-                'price' => 'required|numeric|min:0',
+                'price' => 'required|numeric|min:0.00',
             ]
         );
-        
+
         /*
         $comic->thumb = $data['thumb'];
         $comic->series = $data['series'];

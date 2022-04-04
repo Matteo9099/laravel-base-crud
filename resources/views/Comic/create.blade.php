@@ -46,7 +46,7 @@
     
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo</label>
-                <input type="number" class="form-control" id="price" name="price" value="{{old('price')}}" required>
+                <input type="double" class="form-control" id="price" name="price" value="{{old('price')}}" required>
             </div>
     
             <button type="submit" class="btn btn-primary">Invia</button>

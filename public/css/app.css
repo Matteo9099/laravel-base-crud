@@ -21,6 +21,12 @@
   justify-content: center;
 }
 
+.card img {
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
