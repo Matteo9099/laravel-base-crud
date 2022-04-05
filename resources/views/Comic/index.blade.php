@@ -33,9 +33,8 @@
                                 data-name="{{ $comic->title }}" class="form-delete">
                                 @csrf
                                 @method('DELETE')
-                                <button title="Elimina" class="btn btn-danger d-flex align-items-center"
-                                    {{-- onclick="return confirm('Sicuro di voler eliminare definitivamente questo elemento?')" --}}
-                                    type="submit"><i class="fa-solid fa-trash"></i></button>
+                                <button title="Elimina" class="btn btn-danger d-flex align-items-center" type="submit"><i
+                                        class="fa-solid fa-trash"></i></button>
                             </form>
                         </div>
 
@@ -45,20 +44,9 @@
         </div>
     </section>
 
-    <script>
-        var form_delete = document.querySelectorAll('.form-delete');
+@endsection
 
-        for (var i = 0; i < form_delete.length; i++) {
-            form_delete[i].addEventListener('submit', function(event) {
-                event.preventDefault();
 
-                var accept = confirm('Sicuro di voler eliminare definitivamente questo elemento');
-
-                if (accept) {
-                    window.location.form_delete = event.target.submit();
-                }
-            });
-        }
-    </script>
-
+ @section('script')
+    <script src="{{asset('js/comic/index.js')}}"></script>   
 @endsection

@@ -20,7 +20,6 @@
     @endif
 
 
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -31,11 +30,12 @@
         </div>
     @endif
 
-
     @yield('content')
 
 
     <script src="{{ asset('js/app.js') }}"></script>
+
+    @yield('script')
 
 </body>
 

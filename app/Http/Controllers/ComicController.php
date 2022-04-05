@@ -43,13 +43,14 @@ class ComicController extends Controller
 
         $request->validate(
             [
-                'thumb' => 'required|url',
+                'thumb' =>  'required|url',
                 'title' => 'required|min:5',
                 'series' => 'required',
                 'type' => 'required|min:5',
                 'description' => 'required|min:20|max:255',
                 'price' => 'required|numeric|min:0.00',
-            ]
+            ],
+            
         );
 
         /*
@@ -95,7 +96,7 @@ class ComicController extends Controller
             abort(404);
         }
 
-
+        
     }
 
     /**
